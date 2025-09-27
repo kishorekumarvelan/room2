@@ -1,0 +1,255 @@
+
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-family:sans-serif;
+    background-color:whitesmoke;
+    font-size: medium;
+  }
+  h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 230%;
+    color:rgb(64, 162, 216,1);
+    padding-left: 10px;
+  }
+  .gradient {
+    background: linear-gradient(
+      90deg,
+      rgb(240, 237, 207,1) 0%,
+      rgb(64, 162, 216,1) 100%
+    );
+    height: 12px;
+  }
+  nav {
+    font-size: 100%;
+    padding: 2rem 0.5rem;
+    padding-top: 50px;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+  }
+  nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+  }
+  nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+  }
+  nav a {
+    color:#0280f5;
+    text-decoration: none;
+    display: block;
+  }
+  
+  @media (min-width: 850px) {
+    nav {
+      max-width:100%;
+      margin: 0 auto;
+    }
+    nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+  }
+  canvas {
+    position: fixed;
+    top: 0;
+    left: inherit;
+    right: inherit;
+    bottom: 0;
+    z-index: -1;
+  }
+  .link::before,
+  .link::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color:rgb(252, 0, 0);
+    transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+
+    .link::before {
+      top: -1px;
+      transform-origin: left;
+    }
+
+    .link::after {
+      bottom:-5px;
+      transform-origin: right;
+    }
+
+    .link:hover::before,
+    .link:hover::after,
+    .active::before,
+    .active::after {
+      transform: scaleX(1);
+    }
+
+    .list {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      padding-left: 10px;
+    }
+    
+    .link {
+      
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+    
+    }
+    .landing {
+      background-position: cover;
+      background-size: cover; /* Add this line */
+      width: 1485px;
+      height: 600px;
+      position: relative;
+      
+      background-color: #4cafad;
+    }
+    .footer {
+      background-color: #222222;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .footer .footer-content {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    
+  body{
+    background-image: url("pexels-sonny-sixteen-6759307.jpg");
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+   
+
+  .regform{
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .3);
+    margin:250px auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+    padding: 10px 20px 30px;
+    border-radius: 10px;
+
+}
+.input input{
+  width:50%;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid lightblue;
+  box-shadow: 1px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 150px 150px 150px 250px;
+   
+}
+button{
+    color:white;
+    font-size: 15px;
+    text-align:center ;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: blue;
+    border-radius: 5px;
+    border-style: solid;
+
+}
+.btn{
+  text-align: center;
+  
+}
+.juju{
+  border-style: solid;
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 15px;
+  margin-left:50px;
+  margin-right:50px;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 30px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca
+}
+.lal{
+  padding-left:460px;
+}
+
+.input_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .input_room{
+  border-radius: 1rem;
+  border: 2px solid antiquewhite;
+ }
+
+ .input_button{
+  margin-top: 2rem;
+  border-radius: 1rem;
+  border: 2px solid antiquewhite;
+ }
+
+
+
+ .input_form .input_button{
+  margin-left: 1.5rem;
+  width: 8rem;
+
+ }
+  
+ 

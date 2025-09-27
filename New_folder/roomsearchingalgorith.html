@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuula Random Link Example</title>
+</head>
+<body>
+    <input type="number" id="linkNumber" placeholder="Enter link number">
+    <button onclick="openKuulaLink()">Open Link</button>
+    <div id="kuulaContainer"></div>
+
+    <script>
+        // Define URLs using an object or map
+        var urls = {
+            311: "https://kuula.co/share/collection/7cvH2?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=11",
+            312: "https://kuula.co/share/collection/7cvHr?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=1",
+            313: "https://kuula.co/share/collection/7cvMh?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=1",
+            314: "https://kuula.co/share/collection/7cvMl?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=1",
+            411:"https://kuula.co/share/collection/7cvM6?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            412:"https://kuula.co/share/collection/7cvMs?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            302:"https://kuula.co/share/collection/7cv8B?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=1",
+            429:"https://kuula.co/share/collection/7cvgV?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            428:"https://kuula.co/share/collection/7cvgR?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=1",
+            427:"https://kuula.co/share/collection/7cvgy?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            321:"https://kuula.co/share/collection/7cvxk?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            322:"https://kuula.co/share/collection/7cvxW?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            323:"https://kuula.co/share/collection/7cvC5?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            324:"https://kuula.co/share/collection/7cvC0?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            422:"https://kuula.co/share/collection/7cvxG?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            337:"https://kuula.co/share/collection/7cvxS?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            336:"https://kuula.co/share/collection/7cvCl?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            331:"https://kuula.co/share/collection/7cvCF?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            332:"https://kuula.co/share/collection/7cvV5?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            333:"https://kuula.co/share/collection/7cvVq?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            334:"https://kuula.co/share/collection/7cvVK?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            335:"https://kuula.co/share/collection/7cvVM?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1",
+            421:"https://kuula.co/share/collection/7cvw7?logo=-1&info=0&fs=1&vr=1&sd=1&gyro=0&initload=0&thumbs=1"
+        };
+
+        function openKuulaLink() {
+            var linkNumber = parseInt(document.getElementById('linkNumber').value);
+            var kuulaLink = urls[linkNumber];
+            if (kuulaLink) {
+                // Create an iframe element for the selected link
+                var iframe = document.createElement('iframe');
+                iframe.width = "100%";
+                iframe.height = "719px";
+                iframe.src = kuulaLink;
+                iframe.frameborder = "0";
+                iframe.allowfullscreen = true;
+
+                // Clear previous iframe content
+                document.getElementById('kuulaContainer').innerHTML = "";
+
+                // Append the iframe to the container div
+                document.getElementById('kuulaContainer').appendChild(iframe);
+            } else {
+                alert("No URL found for the entered number.");
+            }
+        }
+    </script>
+</body>
+</html>
